@@ -29,7 +29,7 @@ public class TransporterUnit : Unit
 
             //we go back to the building we came from
             GoTo(m_CurrentTransportTarget);
-            m_Transporting.Count = 0;
+            m_Transporting.Count = 0; 
             m_Transporting.ResourceId = "";
         }
         else
