@@ -10,6 +10,7 @@ public class ColorPicker : MonoBehaviour
     
     public Color SelectedColor { get; private set; }
     public System.Action<Color> onColorChanged;
+    public Sprite spriteButton;
 
     List<Button> m_ColorButtons = new List<Button>();
     
@@ -19,8 +20,10 @@ public class ColorPicker : MonoBehaviour
         foreach (var color in AvailableColors)
         {
             var newButton = Instantiate(ColorButtonPrefab, transform);
+            newButton.GetComponent<Image>().sprite = spriteButton;
             newButton.GetComponent<Image>().color = color;
-            
+            //newButton.GetComponent<>().
+
             newButton.onClick.AddListener(() =>
             {
                 SelectedColor = color;
